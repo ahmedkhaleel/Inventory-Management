@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,4 +22,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::controller(AdminController::class)->group(function () {
+    Route::post('/admin/login', 'login')->name('admin.login');
+    Route::get('/admin/logout', 'destroy')->name('admin.logout');
+    Route::get('/admin/profile', 'profile')->name('admin.profile.view');
+    Route::get('/admin/profile/edit', 'EditProfile')->name('admin.profile.edit');
+    Route::post('/admin/profile/update', 'UpdateProfile')->name('admin.profile.update');
+
+});
 require __DIR__.'/auth.php';

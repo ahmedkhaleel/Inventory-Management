@@ -62,21 +62,21 @@
         </li>
         <li class="nav-item dropdown mr-30">
             <a class="nav-link nav-pill user-avatar" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <img src="{{asset('admin/dashboard/images/profile-avatar.jpg')}}" alt="avatar">
+                <img src="{{(!empty(auth()->user()->profile_image)) ? url('upload/admin_images/'.auth()->user()->profile_image) : url('upload/no_image.png') }}" alt="avatar">
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-header">
-                    <h5 class="mt-0 mb-0">Michael Bean</h5>
-                    <span>michael-bean@mail.com</span>
+                    <h5 class="mt-0 mb-0">{{auth()->user()->name}}</h5>
+                    <span>{{auth()->user()->email}}</span>
                 </div>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#"><i class="text-secondary ti-reload"></i>Activity</a>
                 <a class="dropdown-item" href="#"><i class="text-success ti-email"></i>Messages</a>
-                <a class="dropdown-item" href="#"><i class="text-warning ti-user"></i>Profile</a>
+                <a class="dropdown-item" href="{{route('admin.profile.view')}}"><i class="text-warning ti-user"></i>Profile</a>
                 <a class="dropdown-item" href="#"><i class="text-dark ti-layers-alt"></i>Projects <span class="badge bg-info">6</span> </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#"><i class="text-info ti-settings"></i>Settings</a>
-                <a class="dropdown-item" href="#"><i class="text-danger ti-unlock"></i>Logout</a>
+                <a class="dropdown-item" href="{{route('admin.logout')}}"><i class="text-danger ti-unlock"></i>Logout</a>
             </div>
         </li>
     </ul>
