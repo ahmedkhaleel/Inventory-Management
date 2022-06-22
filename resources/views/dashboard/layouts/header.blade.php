@@ -73,7 +73,7 @@
                 <a class="dropdown-item" href="#"><i class="text-secondary ti-reload"></i>Activity</a>
                 <a class="dropdown-item" href="#"><i class="text-success ti-email"></i>Messages</a>
                 <a class="dropdown-item" href="{{route('admin.profile.view')}}"><i class="text-warning ti-user"></i>Profile</a>
-                <a class="dropdown-item" href="#"><i class="text-dark ti-layers-alt"></i>Projects <span class="badge bg-info">6</span> </a>
+                <a class="dropdown-item" href="{{route('admin.profile.change.password')}}"><i class="text-dark ti-layers-alt"></i>Change Password <span class="badge bg-info">6</span> </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#"><i class="text-info ti-settings"></i>Settings</a>
                 <a class="dropdown-item" href="{{route('admin.logout')}}"><i class="text-danger ti-unlock"></i>Logout</a>
