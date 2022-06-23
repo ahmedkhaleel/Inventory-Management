@@ -11,6 +11,11 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label" for="exampleInputEmail1">User Name</label>
+                            <input type="text" name="user_name" id="user_name" value="{{$adminData->user_name}}" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="exampleInputEmail1">My Name</label>
                             <input type="text" name="name" id="name" value="{{$adminData->name}}" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
                             <small class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>

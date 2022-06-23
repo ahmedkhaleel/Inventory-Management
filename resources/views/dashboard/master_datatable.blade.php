@@ -18,7 +18,6 @@
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="{{asset('admin/dashboard/css/style.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 </head>
 
 <body>
@@ -59,8 +58,6 @@
     Main content -->
 </div>
 
-<!--=================================
-jquery -->
 
 <!-- jquery -->
 <script src="{{asset('admin/dashboard/js/jquery-3.6.0.min.js')}}"></script>
@@ -69,58 +66,40 @@ jquery -->
 <script src="{{asset('admin/dashboard/js/plugins-jquery.js')}}"></script>
 
 <!-- plugin_path -->
-<script>var plugin_path = 'admin/dashboard/js/';</script>
+<script> var plugin_path = 'admin/dashboard/js/';</script>
 
 <!-- chart -->
-@include('dashboard.layouts.js.chart')
+<script src="{{asset('admin/dashboard/js/chart-init.js')}}"></script>
 
 <!-- calendar -->
-@include('dashboard.layouts.js.calendar')
+<script src="{{asset('admin/dashboard/js/calendar.init.js')}}"></script>
 
 <!-- charts sparkline -->
-@include('dashboard.layouts.js.charts_sparkline')
+<script src="{{asset('admin/dashboard/js/sparkline.init.js')}}"></script>
 
 <!-- charts morris -->
-@include('dashboard.layouts.js.charts_morris')
+<script src="{{asset('admin/dashboard/js/morris.init.js')}}"></script>
 
-<!-- datepicker -->
-@include('dashboard.layouts.js.datepicker')
+{{--<!-- datepicker -->--}}
+{{--<script src="{{asset('admin/dashboard/js/datepicker.js')}}"></script>--}}
 
 <!-- sweetalert2 -->
-@include('dashboard.layouts.js.sweetalert')
+<script src="{{asset('admin/dashboard/js/sweetalert2.js')}}"></script>
 
 <!-- toastr -->
-@include('dashboard.layouts.js.toastr')
+<script src="{{asset('admin/dashboard/js/toastr.js')}}"></script>
 
 <!-- validation -->
-@include('dashboard.layouts.js.validation')
+<script src="{{asset('admin/dashboard/js/validation.js')}}"></script>
 
 <!-- lobilist -->
-@include('dashboard.layouts.js.lobilist')
+<script src="{{asset('admin/dashboard/js/lobilist.js')}}"></script>
 
 <!-- custom -->
-@include('dashboard.layouts.js.custom')
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-<script>
-    @if(Session::has('message'))
-    var type = "{{ Session::get('alert-type','info') }}"
-    switch(type){
-        case 'info':
-            toastr.info(" {{ Session::get('message') }} ");
-            break;
-        case 'success':
-            toastr.success(" {{ Session::get('message') }} ");
-            break;
-        case 'warning':
-            toastr.warning(" {{ Session::get('message') }} ");
-            break;
-        case 'error':
-            toastr.error(" {{ Session::get('message') }} ");
-            break;
-    }
-    @endif
-</script>
+<script src="{{asset('admin/dashboard/js/custom.js')}}"></script>
+<script  src="{{asset('admin/dashboard/js/nicescroll/jquery.nicescroll.js')}}"></script>
+<script  src="{{asset('admin/dashboard/js/bootstrap-datatables/jquery.dataTables.min.js')}}"></script>
+<script  src="{{asset('admin/dashboard/js/bootstrap-datatables/dataTables.bootstrap4.min.js')}}"></script>
 
 
 </body>

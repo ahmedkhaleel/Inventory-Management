@@ -9,11 +9,12 @@
                 </center>
 
                 <div class="card-body">
+                    <h6 class="card-title">User Name : {{ $adminData->user_name }} </h6>
                     <h6 class="card-title">Name : {{ $adminData->name }} </h6>
 
                     <h6 class="card-title">User Email : {{ $adminData->email }} </h6>
 
-                    <h6 class="card-title">User Name : {{ $adminData->user_name }} </h6>
+
 
                     <a href="{{route('admin.profile.edit')}}" class="btn btn-info btn-rounded waves-effect waves-light" > Edit Profile</a>
 
